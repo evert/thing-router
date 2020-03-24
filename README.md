@@ -84,5 +84,16 @@ thingRouter.add(
       name: params.name,
       favouriteColor: 'yellow',
     };
-  }
+  },
+  'author' // this is the 'kind'
 );
+```
+
+Now we're trying to fetch an author, but the path leads to a category
+instead:
+
+```typescript
+const author = thingRouter('/article/5', 'author');
+```
+
+The above will thow a `WrongKindError`.
