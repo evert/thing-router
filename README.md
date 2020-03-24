@@ -97,3 +97,6 @@ const author = thingRouter('/article/5', 'author');
 ```
 
 The above will thow a `WrongKindError`.
+
+If you are using json-schema a suggested value for the `kind` parameter could
+be the `$id` attribute.
