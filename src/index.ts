@@ -22,7 +22,7 @@ export default class ThingRouter {
     }
   }
 
-  add(path: string, cb: Callback, kind?: string) {
+  add(path: string, cb: Callback<any, any>, kind?: string) {
 
     this.routes.push([path, matcher(path), cb, kind]);
 
