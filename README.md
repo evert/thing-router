@@ -99,15 +99,9 @@ This is the optional 3rd argument to 'add()':
 
 ```typescript
 thingRouter.add(
-  '/author/:name',
-  (params: AuthorParams): Author => {
-
-    return {
-      name: params.name,
-      favouriteColor: 'yellow',
-    };
-  },
-  'author' // this is the 'kind'
+  '/author/:name', //path
+  authorFinder, // callback
+  'author', // kind
 );
 ```
 
