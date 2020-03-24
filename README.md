@@ -67,6 +67,28 @@ const article = thingRouter('/article/5');
 If the path could not be matched in the router, or if the callback returned
 `null`, a `NotFoundError` will be thrown.
 
+### Structuring code
+
+If you're setting up many routes, it might be beneficial to define the
+callback function in another file, simply pass in the imported function.
+
+```typescript
+thingRouter.add('/article/:id', articleFinder);
+thingRouter.add('/author/:id', authorFinder);
+thingRouter.add('/category/:id', categoryFinder);
+```
+
+This will make long lists more readable. It's also possible to pass all
+the routes via the constructor. This has the same effect:
+
+```typescript
+const thingRouter = new ThingRouter([
+  ['/article/:id',  articleFinder],
+  ['/author/:id',   authorFinder],
+  ['/category/:id', categoryFinder],
+]);
+```
+
 ### Ensuring that the you're getting the right kind of thing.
 
 Suppose you expect to receive an 'author' from the router, but the user
