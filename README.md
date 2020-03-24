@@ -91,11 +91,12 @@ const thingRouter = new ThingRouter([
 
 ### Ensuring that the you're getting the right kind of thing.
 
-Suppose you expect to receive an 'author' from the router, but the user
-specified a url to an 'article', you can let the router check this.
+Suppose you expect to receive an `author` from the router, but the user
+specified a url to an `category`, you can let the router check and error on
+this.
 
 To do this, you must specifiy a 'kind' argument when setting up the route.
-This is the optional 3rd argument to 'add()':
+This is the optional 3rd argument to `add()`:
 
 ```typescript
 thingRouter.add(
