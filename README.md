@@ -109,7 +109,7 @@ Now we're trying to fetch an author, but the path leads to a category
 instead:
 
 ```typescript
-const author = thingRouter('/article/5', 'author');
+const author = thingRouter('/category/5', 'author');
 ```
 
 The above will thow a `WrongKindError`.
