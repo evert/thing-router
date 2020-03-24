@@ -1,6 +1,6 @@
 {
   "name": "thing-router",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple framework-neutral router",
   "main": "dist/index.js",
   "scripts": {
